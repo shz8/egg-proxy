@@ -2,11 +2,11 @@
 
 const mock = require('egg-mock');
 
-describe('test/http-proxy.test.js', () => {
+describe('test/zfaas.test.js', () => {
   let app;
   before(() => {
     app = mock.app({
-      baseDir: 'apps/http-proxy-test',
+      baseDir: 'apps/zfaas-test',
     });
     return app.ready();
   });
@@ -17,7 +17,7 @@ describe('test/http-proxy.test.js', () => {
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, httpProxy')
+      .expect('hi, zfaas')
       .expect(200);
   });
 });

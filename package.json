@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "egg-plugin http-proxy",
   "eggPlugin": {
-    "name": "httpProxy"
+    "name": "httpproxy"
   },
   "keywords": [
     "egg",
@@ -37,19 +37,20 @@
   "files": [
     "app.js",
     "agent.js",
-    "config"
+    "config",
+    "lib"
   ],
   "ci": {
     "version": "8, 9"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-http-proxy.git"
+    "url": "git+https://github.com/eggjs/egg-zfaas.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-http-proxy#readme",
-  "author": "zht",
+  "homepage": "https://github.com/eggjs/egg-zfaas#readme",
+  "author": "",
   "license": "MIT"
 }
