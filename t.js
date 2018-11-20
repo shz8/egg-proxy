@@ -1,24 +1,19 @@
-const url = require('url')
-const HttpProxy = require('http-proxy')
-const proxy = HttpProxy.createProxyServer()
-module.exports = options => {
-  return async function gzip(ctx, next) {
-      //if(ctx.url == '/')
-      {
-        return new Promise((resolve, reject) => {
-            ctx.req.oldPath = ctx.req.url
-            //ctx.logger.info(ctx) 
-            proxy.web(ctx.req, ctx.res, { target: 'http://test1.vy01.com/' , changeOrigin: true}, e => {
-                const status = {
-                  ECONNREFUSED: 503,
-                  ETIMEOUT: 504
-                }[e.code]
-                if (status) ctx.status = status
-                resolve()
-            })
-        })
-      }
-    await next();
-    console.log(ctx.url)
-  };
-};
+let util = require('./lib/utils');
+let pt = [
+  {
+    path: "/risws/",
+    proxy: {
+      target: 'http://t.vy01.com/MedTechWebService/',
+      changeOrigin: true,
+    },
+  },
+  {
+    path: "/zspi/",
+    proxy: { target: 'http://a.vy01.com/api/', changeOrigin: true },
+  },
+  {
+    path: "/zsp22i/",
+    proxy: { target: 'http://a.vy01.com/api/', changeOrigin: true },
+  }]
+console.log(pt)
+console.log(util.proxySort(pt))

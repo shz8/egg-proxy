@@ -1,11 +1,12 @@
 const url = require('url')
 const HttpProxy = require('http-proxy')
 const proxy = HttpProxy.createProxyServer()
-
+const util = require('../../lib/utils');
 module.exports = options => {
   return async function httpproxy(ctx, next) {
     let proxyTable = (ctx.app.config.httpproxy&&ctx.app.config.httpproxy.proxyTable)||[]
     let pxy,pathlen=0;
+    proxyTable = util.proxySort(proxyTable)
     for(let idx=0;idx<proxyTable.length;idx++){
       if(ctx.url.toLowerCase().indexOf(proxyTable[idx].path.toLowerCase().trim())==0){
         pathlen =proxyTable[idx].path.trim().length;

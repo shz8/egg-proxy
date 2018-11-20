@@ -1,6 +1,6 @@
 {
   "name": "egg-http-proxy2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "egg-plugin http-proxy",
   "eggPlugin": {
     "name": "httpproxy"
