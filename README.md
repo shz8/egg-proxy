@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-http-proxy.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-http-proxy
 
-<!--
-Description here.
--->
+Powered by the popular Nodejitsu [`http-proxy`](https://github.com/nodejitsu/node-http-proxy). [![GitHub stars](https://img.shields.io/github/stars/nodejitsu/node-http-proxy.svg?style=social&label=Star)](https://github.com/nodejitsu/node-http-proxy)
 
 ## Install
 
