@@ -10,7 +10,10 @@
     "eggPlugin",
     "egg-plugin"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "http-proxy": "^1.17.0",
+    "url": "^0.11.0"
+  },
   "devDependencies": {
     "autod": "^3.0.0",
     "autod-egg": "^1.0.0",
@@ -45,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-zfaas.git"
+    "url": "git+https://github.com/eggjs/egg-http-proxy.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-zfaas#readme",
+  "homepage": "https://github.com/eggjs/egg-http-proxy#readme",
   "author": "",
   "license": "MIT"
 }
