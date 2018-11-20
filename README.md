@@ -34,7 +34,7 @@ $ npm i egg-http-proxy --save
 
 ```js
 // {app_root}/config/plugin.js
-exports.httpProxy = {
+exports.httpproxy = {
   enable: true,
   package: 'egg-http-proxy',
 };
@@ -44,7 +44,16 @@ exports.httpProxy = {
 
 ```js
 // {app_root}/config/config.default.js
-exports.httpProxy = {
+exports.httpproxy = {
+    proxyTable: [
+      {
+        path: "/risws/",
+        proxy: { target: 'http://t.vy01.com/MedTechWebService/', changeOrigin: true },
+      },
+      {
+        path: "/zsapi/",
+        proxy: { target: 'http://a.vy01.com/api/', changeOrigin: true },
+      }],
 };
 ```
 
