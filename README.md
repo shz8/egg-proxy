@@ -1,4 +1,4 @@
-# egg-http-proxy
+# egg-http-proxy2
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -27,7 +27,7 @@ Description here.
 ## Install
 
 ```bash
-$ npm i egg-http-proxy --save
+$ npm i egg-http-proxy2 --save
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ $ npm i egg-http-proxy --save
 // {app_root}/config/plugin.js
 exports.httpproxy = {
   enable: true,
-  package: 'egg-http-proxy',
+  package: 'egg-http-proxy2',
 };
 ```
 
